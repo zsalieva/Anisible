@@ -17,10 +17,10 @@
       path: "{{ webserver_root_dir }}"
       state: directory
   
-  - name: deploy all pages
+  - name: deploy all pagess
     uri:
       url: https://raw.githubusercontent.com/sprintqaDevOps/ansible/main/playbooks/{{ item }}.html
       dest: "{{ webserver_root_dir }}" 
-   loop:
-     - index
-     - contacts
+    loop:
+      - index
+      - contacts
