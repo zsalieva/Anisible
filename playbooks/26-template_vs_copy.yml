@@ -1,10 +1,10 @@
-- name: copy module
-  hosts: db
-  tasks:
-  - name: report is generated on hosts 
-    copy:
-      src: ./26-specs.conf
-      dest: /tmp/specs.conf
+# - name: copy module
+#   hosts: db
+#   tasks:
+#   - name: report is generated on hosts 
+#     copy:
+#       src: ./26-specs.conf
+#       dest: /tmp/specs.conf
 
 
 
@@ -12,10 +12,10 @@
 
 
 
-# - name: template module
-#   hosts: ubuntu
-#   tasks:
-#   - name: report is generated on hosts 
-#     template:
-#       src: ./26-specs.conf
-#       dest: /tmp/specs.conf
+- name: template module
+  hosts: db
+  tasks:
+  - name: report is generated on hosts 
+    template:
+      src: ./26-specs.conf
+      dest: /tmp/specs.conf
