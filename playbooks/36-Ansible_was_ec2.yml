@@ -9,5 +9,4 @@
       image: ami-0c7e18f50d64f1168
       key_name: MyMac
       region: us-east-1
-      tags:
-        Environment: web
+      wait: yes
