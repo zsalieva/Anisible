@@ -1,0 +1,13 @@
+---
+ - name: Launching aws ec2 instance
+   hosts: localhost
+   gather_facts: false
+   tasks:
+   - name: Launching ec2 instance with ec2 module 
+     ec2:
+      instance_type: t2.micro
+      image: ami-0c7e18f50d64f1168
+      key_name: MyMac
+      region: us-east-1
+      tags:
+        Environment: web
